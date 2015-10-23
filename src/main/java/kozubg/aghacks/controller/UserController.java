@@ -30,6 +30,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public UserDTO create(@RequestBody @Valid UserDTO userEntry) {
+        logger.info("UserController.create: ");
         return userService.create(userEntry);
     }
 

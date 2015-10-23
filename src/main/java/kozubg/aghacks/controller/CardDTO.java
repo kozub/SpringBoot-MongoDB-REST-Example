@@ -1,11 +1,11 @@
-package kozubg.aghacks.entity;
+package kozubg.aghacks.controller;
 
 import java.util.List;
 
 /**
  * Created by kozub on 24.10.15.
  */
-public class Card {
+public class CardDTO {
 
     private String id;
 
@@ -40,7 +40,6 @@ public class Card {
 
     public List<String> getTags() { return tags; }
     public void setTags(List<String> tags) { this.tags = tags; }
-
 
     public static class Builder {
         private String id;
@@ -99,8 +98,8 @@ public class Card {
             return this;
         }
 
-        public Card build() {
-            Card card = new Card();
+        public CardDTO build() {
+            CardDTO card = new CardDTO();
             card.setId(this.id);
             card.setName(this.name);
             card.setLastName(this.lastName);
