@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -21,6 +22,12 @@ public class CardController {
     @Autowired
     private CardService cardService;
 
+    @RequestMapping(method = RequestMethod.GET)
+    public List<CardDTO> getAll() {
+        logger.info("CardController.getAll");
+        return cardService.findAll();
+    }
+
     @RequestMapping(value = "{id}", method = RequestMethod.GET)
     public CardDTO get(@PathVariable("id") String id) {
         logger.info("CardController.get: " + id);
@@ -32,5 +39,12 @@ public class CardController {
     public CardDTO create(@RequestBody @Valid CardDTO cardEntry) {
         logger.info("CardController.create" );
         return cardService.create(cardEntry);
+    }
+
+    @RequestMapping(value = "{login}", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public CardDTO update(@RequestBody @Valid CardDTO cardEntry) {
+        logger.info("CardController.create" );
+        return cardService.update(cardEntry);
     }
 }

@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
+ *
+ *
  * Created by kozub on 24.10.15.
  */
 public class UserDTO {

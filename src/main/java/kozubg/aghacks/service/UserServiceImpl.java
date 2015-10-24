@@ -1,7 +1,7 @@
 package kozubg.aghacks.service;
 
-import kozubg.aghacks.entity.User;
 import kozubg.aghacks.controller.UserDTO;
+import kozubg.aghacks.entity.User;
 import kozubg.aghacks.exception.EntityNotFoundException;
 import kozubg.aghacks.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +34,17 @@ public class UserServiceImpl implements UserService {
     public UserDTO findByLogin(String login) {
         Optional<User> foundUser = repository.findOne(login);
         return convertToDTO(foundUser.orElseThrow(EntityNotFoundException::new));
+    }
+
+    @Override
+    public UserDTO update(UserDTO userEntry) {
+        User foundUser = repository.findOne(userEntry.getLogin()).orElseThrow(EntityNotFoundException::new);
+
+        foundUser.setToken(userEntry.getToken());
+        foundUser.setAddedCard(userEntry.getAddedCard());
+
+        foundUser = repository.save(foundUser);
+        return convertToDTO(foundUser);
     }
 
     private UserDTO convertToDTO(User user) {

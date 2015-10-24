@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import java.util.logging.Logger;
 
 /**
- * User REST API
+ * User REST API controller
  * Created by kozub on 23.10.15.
  */
 @RestController
@@ -34,7 +34,10 @@ public class UserController {
         return userService.create(userEntry);
     }
 
-/*    @RequestMapping(value = "{login}", method = RequestMethod.POST)
+    @RequestMapping(value = "{login}", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    public UserDTO update(@RequestMapping @Valid UserDT)*/
+    public UserDTO update(@RequestBody @Valid UserDTO userEntry) {
+        logger.info("UserController.update");
+        return userService.update(userEntry);
+    }
 }
