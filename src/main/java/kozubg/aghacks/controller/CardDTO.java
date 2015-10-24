@@ -14,6 +14,7 @@ public class CardDTO {
     private String possition;
     private String address;
     private String phone;
+    private String mail;
     private String site;
     private List<String> tags;
 
@@ -41,6 +42,9 @@ public class CardDTO {
     public List<String> getTags() { return tags; }
     public void setTags(List<String> tags) { this.tags = tags; }
 
+    public String getMail() { return mail; }
+    public void setMail(String mail) { this.mail = mail; }
+
     public static class Builder {
         private String id;
         private String name;
@@ -48,6 +52,7 @@ public class CardDTO {
         private String possition;
         private String address;
         private String phone;
+        private String mail;
         private String site;
         private List<String> tags;
 
@@ -88,6 +93,12 @@ public class CardDTO {
             return this;
         }
 
+        public Builder mail(String mail) {
+            this.mail = mail;
+            return this;
+        }
+
+
         public Builder site(String site) {
             this.site = site;
             return this;
@@ -107,6 +118,7 @@ public class CardDTO {
             card.setAddress(this.address);
             card.setPhone(this.phone);
             card.setSite(this.site);
+            card.setMail(this.mail);
             card.setTags(this.tags);
             return card;
         }

@@ -14,6 +14,7 @@ public class Card {
     private String possition;
     private String address;
     private String phone;
+    private String mail;
     private String site;
     private List<String> tags;
 
@@ -35,6 +36,9 @@ public class Card {
     public String getPhone() { return phone; }
     public void setPhone(String phone) { this.phone = phone; }
 
+    public String getMail() { return mail; }
+    public void setMail(String mail) { this.mail = mail; }
+
     public String getSite() { return site; }
     public void setSite(String site) { this.site = site; }
 
@@ -49,6 +53,7 @@ public class Card {
         private String possition;
         private String address;
         private String phone;
+        private String mail;
         private String site;
         private List<String> tags;
 
@@ -89,6 +94,11 @@ public class Card {
             return this;
         }
 
+        public Builder mail(String mail) {
+            this.mail = mail;
+            return this;
+        }
+
         public Builder site(String site) {
             this.site = site;
             return this;
@@ -108,6 +118,7 @@ public class Card {
             card.setAddress(this.address);
             card.setPhone(this.phone);
             card.setSite(this.site);
+            card.setMail(this.mail);
             card.setTags(this.tags);
             return card;
         }
