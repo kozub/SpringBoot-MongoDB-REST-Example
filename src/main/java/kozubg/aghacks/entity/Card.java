@@ -1,5 +1,7 @@
 package kozubg.aghacks.entity;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.List;
 
 /**
@@ -7,6 +9,7 @@ import java.util.List;
  */
 public class Card {
 
+    @Id
     private String id;
 
     private String name;

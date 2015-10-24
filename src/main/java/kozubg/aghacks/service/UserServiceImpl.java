@@ -2,6 +2,7 @@ package kozubg.aghacks.service;
 
 import kozubg.aghacks.controller.UserDTO;
 import kozubg.aghacks.entity.User;
+import kozubg.aghacks.exception.BadRequestException;
 import kozubg.aghacks.exception.EntityNotFoundException;
 import kozubg.aghacks.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO create(UserDTO userDTO) {
+        if (repository.findOne(userDTO.getLogin()).isPresent())
+            throw new BadRequestException();
+
         User persistedUser = new User.Builder()
                 .login(userDTO.getLogin())
                 .token(userDTO.getToken())
