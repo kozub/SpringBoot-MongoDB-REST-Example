@@ -40,4 +40,11 @@ public class UserController {
         logger.info("UserController.update");
         return userService.update(userEntry);
     }
+
+    @RequestMapping(value = "{login}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    public UserDTO delete(@PathVariable("login") String login) {
+        logger.info("UserController.delete for: " + login);
+        return userService.delete(login);
+    }
 }

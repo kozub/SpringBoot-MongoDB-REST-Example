@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserService {
         User persistedUser = new User.Builder()
                 .login(userDTO.getLogin())
                 .token(userDTO.getToken())
+                .addedCard(userDTO.getAddedCard())
                 .build();
 
         persistedUser = repository.save(persistedUser);
@@ -44,6 +45,14 @@ public class UserServiceImpl implements UserService {
         foundUser.setAddedCard(userEntry.getAddedCard());
 
         foundUser = repository.save(foundUser);
+        return convertToDTO(foundUser);
+    }
+
+    @Override
+    public UserDTO delete(String login) {
+        User foundUser = repository.findOne(login).orElseThrow(EntityNotFoundException::new);
+        repository.delete(foundUser.getId());
+
         return convertToDTO(foundUser);
     }
 

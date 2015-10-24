@@ -14,7 +14,9 @@ import java.util.Optional;
 public interface UserRepository extends Repository<User, String>{
 
     User save(User saved);
+    void delete(String id);
 
     @Query(value = "{ 'login' : ?0}")
     Optional<User> findOne(String login);
+
 }
