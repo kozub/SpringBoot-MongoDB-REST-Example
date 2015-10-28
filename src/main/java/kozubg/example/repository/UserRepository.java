@@ -1,6 +1,6 @@
-package kozubg.aghacks.repository;
+package kozubg.example.repository;
 
-import kozubg.aghacks.entity.User;
+import kozubg.example.entity.User;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.Repository;
 

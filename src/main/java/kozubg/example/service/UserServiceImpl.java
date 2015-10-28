@@ -1,10 +1,10 @@
-package kozubg.aghacks.service;
+package kozubg.example.service;
 
-import kozubg.aghacks.controller.UserDTO;
-import kozubg.aghacks.entity.User;
-import kozubg.aghacks.exception.BadRequestException;
-import kozubg.aghacks.exception.EntityNotFoundException;
-import kozubg.aghacks.repository.UserRepository;
+import kozubg.example.controller.UserDTO;
+import kozubg.example.entity.User;
+import kozubg.example.exception.BadRequestException;
+import kozubg.example.exception.EntityNotFoundException;
+import kozubg.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

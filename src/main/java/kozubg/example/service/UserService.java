@@ -1,6 +1,6 @@
-package kozubg.aghacks.service;
+package kozubg.example.service;
 
-import kozubg.aghacks.controller.UserDTO;
+import kozubg.example.controller.UserDTO;
 
 /**
  * UserService defines operations on user entity

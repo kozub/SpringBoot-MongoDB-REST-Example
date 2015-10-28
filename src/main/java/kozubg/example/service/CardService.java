@@ -1,6 +1,6 @@
-package kozubg.aghacks.service;
+package kozubg.example.service;
 
-import kozubg.aghacks.controller.CardDTO;
+import kozubg.example.controller.CardDTO;
 
 import java.util.List;
 

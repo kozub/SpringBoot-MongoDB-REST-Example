@@ -1,4 +1,4 @@
-package kozubg.aghacks.entity;
+package kozubg.example.entity;
 
 import org.springframework.data.annotation.Id;
 

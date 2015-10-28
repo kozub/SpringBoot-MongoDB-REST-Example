@@ -1,13 +1,14 @@
-package kozubg.aghacks.utils;
+package kozubg.example.utils;
 
-import kozubg.aghacks.controller.CardDTO;
-import kozubg.aghacks.entity.Card;
+import kozubg.example.controller.CardDTO;
+import kozubg.example.entity.Card;
 
 /**
+ * Card <-> CardDTO objects mapper
  * Created by kozub on 24.10.15.
  */
 public class CardMapper {
-//TODO reflesją
+
     public static CardDTO toDTO(Card card) {
         return new CardDTO.Builder()
                 .id(card.getId())
@@ -27,7 +28,7 @@ public class CardMapper {
                 .id(cardDTO.getId())
                 .name(cardDTO.getName())
                 .lastName(cardDTO.getLastName())
-                .possition(cardDTO.getPossition())
+                .possition(cardDTO.getPosition())
                 .address(cardDTO.getAddress())
                 .phone(cardDTO.getPhone())
                 .mail(cardDTO.getMail())

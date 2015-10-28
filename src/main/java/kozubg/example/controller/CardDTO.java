@@ -1,4 +1,4 @@
-package kozubg.aghacks.controller;
+package kozubg.example.controller;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class CardDTO {
 
     private String name;
     private String lastName;
-    private String possition;
+    private String position;
     private String address;
     private String phone;
     private String mail;
@@ -27,8 +27,8 @@ public class CardDTO {
     public String getLastName() { return lastName; }
     public void setLastName(String lastName) { this.lastName = lastName; }
 
-    public String getPossition() { return possition; }
-    public void setPossition(String possition) { this.possition = possition; }
+    public String getPosition() { return position; }
+    public void setPosition(String position) { this.position = position; }
 
     public String getAddress() { return address; }
     public void setAddress(String address) { this.address = address; }
@@ -114,7 +114,7 @@ public class CardDTO {
             card.setId(this.id);
             card.setName(this.name);
             card.setLastName(this.lastName);
-            card.setPossition(this.possition);
+            card.setPosition(this.possition);
             card.setAddress(this.address);
             card.setPhone(this.phone);
             card.setSite(this.site);

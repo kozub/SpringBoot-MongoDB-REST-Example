@@ -1,4 +1,4 @@
-package kozubg.aghacks.controller;
+package kozubg.example.controller;
 
 import com.google.common.base.MoreObjects;
 import org.hibernate.validator.constraints.NotEmpty;

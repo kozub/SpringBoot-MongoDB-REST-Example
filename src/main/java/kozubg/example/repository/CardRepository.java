@@ -1,6 +1,6 @@
-package kozubg.aghacks.repository;
+package kozubg.example.repository;
 
-import kozubg.aghacks.entity.Card;
+import kozubg.example.entity.Card;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;

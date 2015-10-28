@@ -1,6 +1,6 @@
-package kozubg.aghacks.controller;
+package kozubg.example.controller;
 
-import kozubg.aghacks.service.UserService;
+import kozubg.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,10 +1,10 @@
-package kozubg.aghacks.service;
+package kozubg.example.service;
 
-import kozubg.aghacks.controller.CardDTO;
-import kozubg.aghacks.entity.Card;
-import kozubg.aghacks.exception.EntityNotFoundException;
-import kozubg.aghacks.repository.CardRepository;
-import kozubg.aghacks.utils.CardMapper;
+import kozubg.example.controller.CardDTO;
+import kozubg.example.entity.Card;
+import kozubg.example.exception.EntityNotFoundException;
+import kozubg.example.repository.CardRepository;
+import kozubg.example.utils.CardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

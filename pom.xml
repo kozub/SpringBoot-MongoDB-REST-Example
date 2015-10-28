@@ -4,12 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>kozubg.aghacks</groupId>
-	<artifactId>cartonik</artifactId>
+	<artifactId>rest-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>cartonik</name>
-	<description>AGHacks projects</description>
+	<name>Rest with Spring Boot and MongoDB example</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,7 +20,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<start-class>kozubg.aghacks.CartonikApplication</start-class>
+		<start-class>kozubg.example.CartonikApplication</start-class>
 	</properties>
 
 	<dependencies>
